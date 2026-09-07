@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-04T11:17:55.594Z",
+  "generatedAt": "2026-09-07T12:32:32.335Z",
   "updates": [
     {
       "tool": "CPD Finder",
@@ -56,15 +56,6 @@
       "author": "Sean Clohessy"
     },
     {
-      "tool": "CPD Finder",
-      "repository": "CPD-Finder",
-      "type": "commit",
-      "summary": "Build CPD Finder V1",
-      "url": "https://github.com/sean-p-clohessy/CPD-Finder/commit/0dbd24e0d3a39a7cfd23b446726e7b2904cabfda",
-      "timestamp": "2026-09-03T15:47:44Z",
-      "author": "Sean Clohessy"
-    },
-    {
       "tool": "EHCP Outcome Cruncher",
       "repository": "EHCP-Outcome-Cruncher",
       "type": "commit",
@@ -89,6 +80,15 @@
       "summary": "Rename builder and organise progress contexts (#8)",
       "url": "https://github.com/sean-p-clohessy/ProgressPointBuilder/commit/6390b6d7298c20ce7fde4b8068e13e7d4ca66b4c",
       "timestamp": "2026-09-01T07:25:53Z",
+      "author": "Sean Clohessy"
+    },
+    {
+      "tool": "SMART Target Builder",
+      "repository": "SMARTTargetBuilder",
+      "type": "commit",
+      "summary": "Expand English maths and attendance targets",
+      "url": "https://github.com/sean-p-clohessy/SMARTTargetBuilder/commit/dba905660b3eefded8c6e459b3cb19455b2c5943",
+      "timestamp": "2026-09-01T07:15:01Z",
       "author": "Sean Clohessy"
     }
   ]
