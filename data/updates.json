@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-07T12:32:32.335Z",
+  "generatedAt": "2026-09-08T11:19:02.426Z",
   "updates": [
     {
       "tool": "CPD Finder",
@@ -47,15 +47,6 @@
       "author": "Sean Clohessy"
     },
     {
-      "tool": "CPD Finder",
-      "repository": "CPD-Finder",
-      "type": "commit",
-      "summary": "Require direct opportunity links",
-      "url": "https://github.com/sean-p-clohessy/CPD-Finder/commit/a955957adc01725f74f91263e6c2952d5215fa98",
-      "timestamp": "2026-09-03T16:56:31Z",
-      "author": "Sean Clohessy"
-    },
-    {
       "tool": "EHCP Outcome Cruncher",
       "repository": "EHCP-Outcome-Cruncher",
       "type": "commit",
@@ -89,6 +80,15 @@
       "summary": "Expand English maths and attendance targets",
       "url": "https://github.com/sean-p-clohessy/SMARTTargetBuilder/commit/dba905660b3eefded8c6e459b3cb19455b2c5943",
       "timestamp": "2026-09-01T07:15:01Z",
+      "author": "Sean Clohessy"
+    },
+    {
+      "tool": "Evidence, Please",
+      "repository": "evidence-please",
+      "type": "commit",
+      "summary": "Remove legacy green from alternate palettes",
+      "url": "https://github.com/sean-p-clohessy/evidence-please/commit/702c2dc6cc2fa6f66bedbad6ac8c5b3c675397e1",
+      "timestamp": "2026-08-18T19:00:00Z",
       "author": "Sean Clohessy"
     }
   ]
