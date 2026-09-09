@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-08T11:19:02.426Z",
+  "generatedAt": "2026-09-09T11:23:37.387Z",
   "updates": [
     {
       "tool": "CPD Finder",
@@ -35,15 +35,6 @@
       "summary": "Expand opportunities and add filters",
       "url": "https://github.com/sean-p-clohessy/CPD-Finder/commit/c4839fa0a792da2fd09a0a8e84597e13ee8b9f03",
       "timestamp": "2026-09-03T17:26:05Z",
-      "author": "Sean Clohessy"
-    },
-    {
-      "tool": "CPD Finder",
-      "repository": "CPD-Finder",
-      "type": "commit",
-      "summary": "Align opportunity card heights",
-      "url": "https://github.com/sean-p-clohessy/CPD-Finder/commit/a5e92860a2181ef5fc7106eaa3222da1c535b9e5",
-      "timestamp": "2026-09-03T16:58:42Z",
       "author": "Sean Clohessy"
     },
     {
@@ -89,6 +80,15 @@
       "summary": "Remove legacy green from alternate palettes",
       "url": "https://github.com/sean-p-clohessy/evidence-please/commit/702c2dc6cc2fa6f66bedbad6ac8c5b3c675397e1",
       "timestamp": "2026-08-18T19:00:00Z",
+      "author": "Sean Clohessy"
+    },
+    {
+      "tool": "Evidence, Please",
+      "repository": "evidence-please",
+      "type": "commit",
+      "summary": "Add accessible colour palette choices",
+      "url": "https://github.com/sean-p-clohessy/evidence-please/commit/22fa4b30d21d6c531044e831007e1ff34691c781",
+      "timestamp": "2026-08-18T18:50:21Z",
       "author": "Sean Clohessy"
     }
   ]
