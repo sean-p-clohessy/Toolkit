@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-10T11:19:42.887Z",
+  "generatedAt": "2026-09-11T11:21:06.165Z",
   "updates": [
     {
       "tool": "CPD Finder",
@@ -17,15 +17,6 @@
       "summary": "Tighten page section spacing",
       "url": "https://github.com/sean-p-clohessy/CPD-Finder/commit/b93eb8051190a5da754e06968b32b83ccdecf15f",
       "timestamp": "2026-09-04T07:44:16Z",
-      "author": "Sean Clohessy"
-    },
-    {
-      "tool": "CPD Finder",
-      "repository": "CPD-Finder",
-      "type": "commit",
-      "summary": "Collect complete provider inventories",
-      "url": "https://github.com/sean-p-clohessy/CPD-Finder/commit/22917b58a8dfc341c35baf239005d45bfbff20b5",
-      "timestamp": "2026-09-03T17:43:24Z",
       "author": "Sean Clohessy"
     },
     {
@@ -89,6 +80,15 @@
       "summary": "Improve navigation defaults and contrast",
       "url": "https://github.com/sean-p-clohessy/evidence-please/commit/8e2e955a86516ffcd9a88da8d92d55827b224ecb",
       "timestamp": "2026-08-18T18:42:24Z",
+      "author": "Sean Clohessy"
+    },
+    {
+      "tool": "Evidence, Please",
+      "repository": "evidence-please",
+      "type": "commit",
+      "summary": "Add Bodyswaps interview pack library",
+      "url": "https://github.com/sean-p-clohessy/evidence-please/commit/39f941774e2748898d722b21c7cce385a79b6465",
+      "timestamp": "2026-08-18T18:33:42Z",
       "author": "Sean Clohessy"
     }
   ]
