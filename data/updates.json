@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-11T11:21:06.165Z",
+  "generatedAt": "2026-09-12T10:46:15.102Z",
   "updates": [
     {
       "tool": "CPD Finder",
@@ -8,15 +8,6 @@
       "summary": "Pull finder controls closer to hero",
       "url": "https://github.com/sean-p-clohessy/CPD-Finder/commit/b791c9973f4ee9919e0619f1f33c1a0db6b9c274",
       "timestamp": "2026-09-04T07:46:58Z",
-      "author": "Sean Clohessy"
-    },
-    {
-      "tool": "CPD Finder",
-      "repository": "CPD-Finder",
-      "type": "commit",
-      "summary": "Tighten page section spacing",
-      "url": "https://github.com/sean-p-clohessy/CPD-Finder/commit/b93eb8051190a5da754e06968b32b83ccdecf15f",
-      "timestamp": "2026-09-04T07:44:16Z",
       "author": "Sean Clohessy"
     },
     {
@@ -89,6 +80,15 @@
       "summary": "Add Bodyswaps interview pack library",
       "url": "https://github.com/sean-p-clohessy/evidence-please/commit/39f941774e2748898d722b21c7cce385a79b6465",
       "timestamp": "2026-08-18T18:33:42Z",
+      "author": "Sean Clohessy"
+    },
+    {
+      "tool": "Evidence, Please",
+      "repository": "evidence-please",
+      "type": "commit",
+      "summary": "Move follow-up below original answer",
+      "url": "https://github.com/sean-p-clohessy/evidence-please/commit/972915ee89ad6889913b8132985d35928a56c425",
+      "timestamp": "2026-08-18T18:18:56Z",
       "author": "Sean Clohessy"
     }
   ]
