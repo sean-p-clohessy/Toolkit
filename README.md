@@ -22,6 +22,12 @@ The homepage reads this static JSON and displays a graceful empty state before t
 
 `.github/workflows/pages.yml` deploys the static site on each push to `main`. In the repository settings, set **Pages → Build and deployment → Source** to **GitHub Actions** if it is not selected automatically.
 
+## Visit counter
+
+The footer uses the same account-free Hits service as CPD Finder, with a separate counter for `edutools.uk`. `assets/js/visits.js` loads the badge once per page load on the published Toolkit domains only. Local previews do not count, and all supported domains use one shared total. Clicking the badge opens the public totals on Hits.
+
+The total is approximate, starts on 25 September 2026, and cannot recover previous traffic. Repeat loads may count again; caching, blocked requests and bots can affect accuracy. The image request goes to hits.sh with no referrer or visited-page query string. No account, API key or third-party JavaScript is required. If the image fails, the counter stays hidden. Do not poll the badge: each request can add a hit.
+
 ## Custom domain
 
 The site uses **edutools.uk** as its custom domain. Configure the apex domain with the DNS records recommended by GitHub Pages, then enable **Enforce HTTPS** after DNS has propagated. The committed `CNAME` file keeps the domain attached to the deployment.
