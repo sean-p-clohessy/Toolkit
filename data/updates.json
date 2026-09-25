@@ -1,15 +1,6 @@
 {
-  "generatedAt": "2026-09-15T11:44:16.784Z",
+  "generatedAt": "2026-09-25T11:50:35.685Z",
   "updates": [
-    {
-      "tool": "CPD Finder",
-      "repository": "CPD-Finder",
-      "type": "commit",
-      "summary": "Add VTCT Skills event collection",
-      "url": "https://github.com/sean-p-clohessy/CPD-Finder/commit/774f0dc66f2914ae926a09477f46b1813e6bdfd4",
-      "timestamp": "2026-09-15T11:13:33Z",
-      "author": "Sean Clohessy"
-    },
     {
       "tool": "EHCP Outcome Cruncher",
       "repository": "EHCP-Outcome-Cruncher",
@@ -89,6 +80,15 @@
       "summary": "Add accessible colour palette choices",
       "url": "https://github.com/sean-p-clohessy/evidence-please/commit/22fa4b30d21d6c531044e831007e1ff34691c781",
       "timestamp": "2026-08-18T18:50:21Z",
+      "author": "Sean Clohessy"
+    },
+    {
+      "tool": "Evidence, Please",
+      "repository": "evidence-please",
+      "type": "commit",
+      "summary": "Improve navigation defaults and contrast",
+      "url": "https://github.com/sean-p-clohessy/evidence-please/commit/8e2e955a86516ffcd9a88da8d92d55827b224ecb",
+      "timestamp": "2026-08-18T18:42:24Z",
       "author": "Sean Clohessy"
     }
   ]
