@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-25T17:11:16.681Z",
+  "generatedAt": "2026-10-04T12:21:40.743Z",
   "updates": [
     {
       "tool": "CPD Finder",
@@ -8,15 +8,6 @@
       "summary": "Collect NOCN courses and add provider catalogue links",
       "url": "https://github.com/sean-p-clohessy/CPD-Finder/commit/6354353fcbc54ad6f987edad5967755950706a92",
       "timestamp": "2026-09-25T15:06:45Z",
-      "author": "Sean Clohessy"
-    },
-    {
-      "tool": "CPD Finder",
-      "repository": "CPD-Finder",
-      "type": "commit",
-      "summary": "Add public visits counter to footer",
-      "url": "https://github.com/sean-p-clohessy/CPD-Finder/commit/37a82698fb0f527873e9821f5482437b29b998f0",
-      "timestamp": "2026-09-25T12:36:10Z",
       "author": "Sean Clohessy"
     },
     {
@@ -89,6 +80,15 @@
       "summary": "Remove legacy green from alternate palettes",
       "url": "https://github.com/sean-p-clohessy/evidence-please/commit/702c2dc6cc2fa6f66bedbad6ac8c5b3c675397e1",
       "timestamp": "2026-08-18T19:00:00Z",
+      "author": "Sean Clohessy"
+    },
+    {
+      "tool": "Evidence, Please",
+      "repository": "evidence-please",
+      "type": "commit",
+      "summary": "Add accessible colour palette choices",
+      "url": "https://github.com/sean-p-clohessy/evidence-please/commit/22fa4b30d21d6c531044e831007e1ff34691c781",
+      "timestamp": "2026-08-18T18:50:21Z",
       "author": "Sean Clohessy"
     }
   ]
