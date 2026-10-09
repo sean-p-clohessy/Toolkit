@@ -1,6 +1,24 @@
 {
-  "generatedAt": "2026-10-05T14:38:12.630Z",
+  "generatedAt": "2026-10-09T13:16:52.988Z",
   "updates": [
+    {
+      "tool": "Progress Tracking Builder",
+      "repository": "ProgressPointBuilder",
+      "type": "commit",
+      "summary": "Add account-free footer visits counter",
+      "url": "https://github.com/sean-p-clohessy/ProgressPointBuilder/commit/8b37448178f9d820516a5022ca825a5d255bcdbc",
+      "timestamp": "2026-10-09T13:14:07Z",
+      "author": "Sean Clohessy"
+    },
+    {
+      "tool": "SMART Target Builder",
+      "repository": "SMARTTargetBuilder",
+      "type": "commit",
+      "summary": "Add account-free footer visits counter",
+      "url": "https://github.com/sean-p-clohessy/SMARTTargetBuilder/commit/63f0e6a224b93966214f98553cb8fb9dc06e6382",
+      "timestamp": "2026-10-09T13:14:04Z",
+      "author": "Sean Clohessy"
+    },
     {
       "tool": "EHCP Outcome Cruncher",
       "repository": "EHCP-Outcome-Cruncher",
@@ -71,24 +89,6 @@
       "summary": "Remove legacy green from alternate palettes",
       "url": "https://github.com/sean-p-clohessy/evidence-please/commit/702c2dc6cc2fa6f66bedbad6ac8c5b3c675397e1",
       "timestamp": "2026-08-18T19:00:00Z",
-      "author": "Sean Clohessy"
-    },
-    {
-      "tool": "Evidence, Please",
-      "repository": "evidence-please",
-      "type": "commit",
-      "summary": "Add accessible colour palette choices",
-      "url": "https://github.com/sean-p-clohessy/evidence-please/commit/22fa4b30d21d6c531044e831007e1ff34691c781",
-      "timestamp": "2026-08-18T18:50:21Z",
-      "author": "Sean Clohessy"
-    },
-    {
-      "tool": "Evidence, Please",
-      "repository": "evidence-please",
-      "type": "commit",
-      "summary": "Improve navigation defaults and contrast",
-      "url": "https://github.com/sean-p-clohessy/evidence-please/commit/8e2e955a86516ffcd9a88da8d92d55827b224ecb",
-      "timestamp": "2026-08-18T18:42:24Z",
       "author": "Sean Clohessy"
     }
   ]
