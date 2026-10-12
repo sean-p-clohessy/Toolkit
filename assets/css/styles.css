@@ -58,7 +58,10 @@ h2 { font-size: clamp(1.75rem, 1.25rem + 1.2vw, 2.5rem); line-height: 1.16; lett
 .section-heading > p { color: var(--secondary); max-width: 36ch; margin: 0; font-size: .9375rem; }
 .tool-grid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 16px; }
 .tool-card { grid-column: span 2; display: flex; flex-direction: column; gap: 20px; min-width: 0; padding: 24px; background: var(--surface); border: 1px solid var(--border); border-radius: 20px; text-decoration: none; transition: border-color .18s, background-color .18s; }
-.tool-card:nth-child(4), .tool-card:nth-child(5) { grid-column: span 3; }
+.tool-card--game { grid-column: 1 / -1; display: grid; grid-template-columns: 72px minmax(0, 1fr) auto; align-items: center; gap: 24px; }
+.tool-card--game .card-top { flex-direction: column-reverse; gap: 8px; }
+.tool-card--game .card-copy > p:last-child { max-width: 70ch; }
+.tool-card--game .card-footer { flex-direction: column; align-items: flex-end; margin-top: 0; }
 /* Tool colours identify the applications; copy keeps its high-contrast neutral tone. */
 .tool-card {
   --tool-accent: #ff3f9a;
@@ -133,7 +136,7 @@ h2 { font-size: clamp(1.75rem, 1.25rem + 1.2vw, 2.5rem); line-height: 1.16; lett
 @media (max-width: 900px) {
   .hero-copy { gap: 16px 32px; }
   .tool-card { grid-column: span 3; }
-  .tool-card:nth-child(5) { grid-column: span 6; }
+  .tool-card--game { grid-column: 1 / -1; }
   .updates-layout { grid-template-columns: 1fr; gap: 32px; }
   .principles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .footer-main { grid-template-columns: 1fr 1fr; }
@@ -152,7 +155,9 @@ h2 { font-size: clamp(1.75rem, 1.25rem + 1.2vw, 2.5rem); line-height: 1.16; lett
   .section-heading { display: block; }
   .section-heading > p { margin-top: 12px; }
   .tool-grid { grid-template-columns: 1fr; gap: 12px; }
-  .tool-card, .tool-card:nth-child(4), .tool-card:nth-child(5) { grid-column: auto; padding: 20px; gap: 16px; }
+  .tool-card { grid-column: auto; padding: 20px; gap: 16px; }
+  .tool-card--game { display: flex; }
+  .tool-card--game .card-top, .tool-card--game .card-footer { flex-direction: row; align-items: center; width: 100%; }
   .about-intro { grid-template-columns: 1fr; gap: 16px; margin-bottom: 32px; }
   .principles { gap: 24px; }
   .idea-inner { align-items: flex-start; flex-direction: column; gap: 24px; }

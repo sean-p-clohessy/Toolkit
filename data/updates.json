@@ -1,6 +1,60 @@
 {
-  "generatedAt": "2026-10-09T13:16:52.988Z",
+  "generatedAt": "2026-10-12T09:38:58.688Z",
   "updates": [
+    {
+      "tool": "SMART Target Builder",
+      "repository": "SMARTTargetBuilder",
+      "type": "commit",
+      "summary": "Split English and maths target banks",
+      "url": "https://github.com/sean-p-clohessy/SMARTTargetBuilder/commit/2a4d5c8b535be334d40a16b5a12c157c58f78c7b",
+      "timestamp": "2026-10-12T09:31:23Z",
+      "author": "Sean Clohessy"
+    },
+    {
+      "tool": "Assessment Record Builder",
+      "repository": "AssessmentRecordBuilder",
+      "type": "commit",
+      "summary": "Restore restrained grade colours and teal accents",
+      "url": "https://github.com/sean-p-clohessy/AssessmentRecordBuilder/commit/1dc5ff39cdd3e90a3f82e4ca9b95fe5ad0140fdd",
+      "timestamp": "2026-10-12T09:21:53Z",
+      "author": "Sean Clohessy"
+    },
+    {
+      "tool": "SMART Target Builder",
+      "repository": "SMARTTargetBuilder",
+      "type": "commit",
+      "summary": "Apply Apple-inspired interface design",
+      "url": "https://github.com/sean-p-clohessy/SMARTTargetBuilder/commit/62252e5e8534433e2a61973ab8f20a05c070833d",
+      "timestamp": "2026-10-12T07:42:20Z",
+      "author": "Sean Clohessy"
+    },
+    {
+      "tool": "Assessment Record Builder",
+      "repository": "AssessmentRecordBuilder",
+      "type": "commit",
+      "summary": "Refine assessment interface with Apple-inspired design",
+      "url": "https://github.com/sean-p-clohessy/AssessmentRecordBuilder/commit/4064ce51faa6cd94781640d6ae578daadfd1dc13",
+      "timestamp": "2026-10-12T07:37:30Z",
+      "author": "Sean Clohessy"
+    },
+    {
+      "tool": "EHCP Outcome Cruncher",
+      "repository": "EHCP-Outcome-Cruncher",
+      "type": "commit",
+      "summary": "Apply Apple-inspired Workbench design",
+      "url": "https://github.com/sean-p-clohessy/EHCP-Outcome-Cruncher/commit/e55491995308caf03e71b0840a98b560049adf3a",
+      "timestamp": "2026-10-12T07:36:36Z",
+      "author": "Sean Clohessy"
+    },
+    {
+      "tool": "CPD Finder",
+      "repository": "CPD-Finder",
+      "type": "commit",
+      "summary": "Refresh CPD Finder with Apple-inspired utility design",
+      "url": "https://github.com/sean-p-clohessy/CPD-Finder/commit/3eb4b31b5b4c1cbc859de0610654572d90e5f7f3",
+      "timestamp": "2026-10-12T07:36:06Z",
+      "author": "Sean Clohessy"
+    },
     {
       "tool": "Progress Tracking Builder",
       "repository": "ProgressPointBuilder",
@@ -20,75 +74,21 @@
       "author": "Sean Clohessy"
     },
     {
-      "tool": "EHCP Outcome Cruncher",
-      "repository": "EHCP-Outcome-Cruncher",
+      "tool": "Exam Booker",
+      "repository": "exam-booker",
       "type": "commit",
-      "summary": "Fix homepage note spacing",
-      "url": "https://github.com/sean-p-clohessy/EHCP-Outcome-Cruncher/commit/44931002e24c92a453f7f91e72becf076a8ff819",
-      "timestamp": "2026-09-15T10:13:07Z",
+      "summary": "Make learner access arrangements collapsible",
+      "url": "https://github.com/sean-p-clohessy/exam-booker/commit/3b9201ac94180949a9ea845d24a32ae6f12950c0",
+      "timestamp": "2026-09-18T07:33:27Z",
       "author": "Sean Clohessy"
     },
     {
-      "tool": "EHCP Outcome Cruncher",
-      "repository": "EHCP-Outcome-Cruncher",
+      "tool": "Exam Booker",
+      "repository": "exam-booker",
       "type": "commit",
-      "summary": "Add prominent start again control",
-      "url": "https://github.com/sean-p-clohessy/EHCP-Outcome-Cruncher/commit/6f27cce095a1eca9375c2716b4f25dd200d1ece9",
-      "timestamp": "2026-09-15T10:08:43Z",
-      "author": "Sean Clohessy"
-    },
-    {
-      "tool": "EHCP Outcome Cruncher",
-      "repository": "EHCP-Outcome-Cruncher",
-      "type": "commit",
-      "summary": "Add guided and custom outcome routes",
-      "url": "https://github.com/sean-p-clohessy/EHCP-Outcome-Cruncher/commit/1dd61e81990ef3d1c60c3157323102fc61e098be",
-      "timestamp": "2026-09-15T10:02:40Z",
-      "author": "Sean Clohessy"
-    },
-    {
-      "tool": "EHCP Outcome Cruncher",
-      "repository": "EHCP-Outcome-Cruncher",
-      "type": "commit",
-      "summary": "Expand outcome bank and simplify workflow",
-      "url": "https://github.com/sean-p-clohessy/EHCP-Outcome-Cruncher/commit/e100e96a220231d840fb60548e238bab931fc7ef",
-      "timestamp": "2026-09-03T08:10:47Z",
-      "author": "Sean Clohessy"
-    },
-    {
-      "tool": "EHCP Outcome Cruncher",
-      "repository": "EHCP-Outcome-Cruncher",
-      "type": "commit",
-      "summary": "Build initial EHCP Outcome Cruncher prototype",
-      "url": "https://github.com/sean-p-clohessy/EHCP-Outcome-Cruncher/commit/8c1b06399677d2c2af4fe012abcbd74f6be5e472",
-      "timestamp": "2026-09-02T08:23:52Z",
-      "author": "Sean Clohessy"
-    },
-    {
-      "tool": "Progress Tracking Builder",
-      "repository": "ProgressPointBuilder",
-      "type": "commit",
-      "summary": "Rename builder and organise progress contexts (#8)",
-      "url": "https://github.com/sean-p-clohessy/ProgressPointBuilder/commit/6390b6d7298c20ce7fde4b8068e13e7d4ca66b4c",
-      "timestamp": "2026-09-01T07:25:53Z",
-      "author": "Sean Clohessy"
-    },
-    {
-      "tool": "SMART Target Builder",
-      "repository": "SMARTTargetBuilder",
-      "type": "commit",
-      "summary": "Expand English maths and attendance targets",
-      "url": "https://github.com/sean-p-clohessy/SMARTTargetBuilder/commit/dba905660b3eefded8c6e459b3cb19455b2c5943",
-      "timestamp": "2026-09-01T07:15:01Z",
-      "author": "Sean Clohessy"
-    },
-    {
-      "tool": "Evidence, Please",
-      "repository": "evidence-please",
-      "type": "commit",
-      "summary": "Remove legacy green from alternate palettes",
-      "url": "https://github.com/sean-p-clohessy/evidence-please/commit/702c2dc6cc2fa6f66bedbad6ac8c5b3c675397e1",
-      "timestamp": "2026-08-18T19:00:00Z",
+      "summary": "Clarify access arrangements using JCQ terminology",
+      "url": "https://github.com/sean-p-clohessy/exam-booker/commit/7b1134c98ad194b25af963a9db92a4826aead7d5",
+      "timestamp": "2026-09-18T07:19:51Z",
       "author": "Sean Clohessy"
     }
   ]

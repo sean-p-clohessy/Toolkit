@@ -28,15 +28,17 @@ function fixture(fetch) {
   return { context, region, retry, attributes, grid };
 }
 
-test('all five original tool destinations and new-tab hints are retained', () => {
+test('seven tool destinations, individual colours and new-tab hints are retained', () => {
   const f = fixture();
   f.context.renderTools();
-  assert.equal((f.grid.innerHTML.match(/class="tool-card"/g) || []).length, 5);
+  assert.equal((f.grid.innerHTML.match(/class="tool-card/g) || []).length, 7);
+  assert.equal((f.grid.innerHTML.match(/tool-card--game/g) || []).length, 1);
+  assert.equal(f.context.window.TOOLKIT_TOOLS.at(-1).id, 'evidence-please');
   for (const tool of f.context.window.TOOLKIT_TOOLS) {
     assert.ok(f.grid.innerHTML.includes('href="' + tool.url + '"'));
     assert.ok(f.grid.innerHTML.includes('--tool-accent:' + tool.accent));
   }
-  assert.equal((f.grid.innerHTML.match(/opens in a new tab/g) || []).length, 5);
+  assert.equal((f.grid.innerHTML.match(/opens in a new tab/g) || []).length, 7);
 });
 test('successful feed renders updates and clears busy state', async () => {
   const f = fixture(async () => ({ ok: true, json: async () => ({ updates: [

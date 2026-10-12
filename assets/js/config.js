@@ -48,6 +48,30 @@ window.TOOLKIT_TOOLS = [
     cta: "Open tool"
   },
   {
+    id: "assessment-record-builder",
+    title: "Assessment Record Builder",
+    category: "Assessment & Feedback",
+    description: "Create assessment records for Games Design, Media and Photography.",
+    url: "https://sean-p-clohessy.github.io/AssessmentRecordBuilder/",
+    repo: "AssessmentRecordBuilder",
+    accent: "#4edcca",
+    icon: "clipboard",
+    tags: ["LIVE"],
+    cta: "Open tool"
+  },
+  {
+    id: "exam-booker",
+    title: "Exam Booker",
+    category: "Assessment & Planning",
+    description: "Find an assessment, add learners and download a completed Word booking request.",
+    url: "https://sean-p-clohessy.github.io/exam-booker/",
+    repo: "exam-booker",
+    accent: "#ffcd57",
+    icon: "calendar",
+    tags: ["LIVE"],
+    cta: "Open tool"
+  },
+  {
     id: "evidence-please",
     title: "Evidence, Please",
     category: "Games & Training",

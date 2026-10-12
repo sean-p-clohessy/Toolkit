@@ -1,4 +1,6 @@
 const icons = {
+  clipboard: '<svg viewBox="0 0 48 48" aria-hidden="true"><path d="M16 9H9v34h30V9h-7M18 5h12v9H18zM17 24h14M17 32h10"/></svg>',
+  calendar: '<svg viewBox="0 0 48 48" aria-hidden="true"><rect x="7" y="10" width="34" height="32" rx="3"/><path d="M15 5v10M33 5v10M7 20h34m-26 11 6 6 12-12"/></svg>',
   target: '<svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="15"/><circle cx="24" cy="24" r="7"/><path d="M24 3v7M24 38v7M3 24h7M38 24h7"/></svg>',
   chart: '<svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 39V9M8 39h33M13 32l8-9 7 5 11-15"/><path d="M32 13h7v7"/></svg>',
   connections: '<svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="12" cy="24" r="5"/><circle cx="36" cy="12" r="5"/><circle cx="36" cy="36" r="5"/><path d="m17 22 14-8M17 26l14 8"/></svg>',
@@ -10,7 +12,7 @@ function renderTools() {
   const grid = document.querySelector('[data-tool-grid]');
   if (!grid || !Array.isArray(window.TOOLKIT_TOOLS)) return;
   grid.innerHTML = window.TOOLKIT_TOOLS.map((tool, index) => `
-    <a class="tool-card" style="--tool-accent:${tool.accent}" href="${tool.url}" target="_blank" rel="noopener noreferrer" aria-label="${tool.title} — ${tool.cta} (opens in a new tab)">
+    <a class="tool-card${tool.variant === 'evidence' ? ' tool-card--game' : ''}" style="--tool-accent:${tool.accent}" href="${tool.url}" target="_blank" rel="noopener noreferrer" aria-label="${tool.title} — ${tool.cta} (opens in a new tab)">
       <div class="card-top"><span class="card-index">0${index + 1}</span><span class="tool-icon">${icons[tool.icon] || icons.target}</span></div>
       <div class="card-copy"><p class="category">${tool.category}</p><h3>${tool.title}</h3><p>${tool.description}</p></div>
       <div class="card-footer"><div class="tags">${(tool.tags || []).map(tag => `<span>${tag}</span>`).join('')}</div><span class="card-cta">${tool.cta} <span aria-hidden="true">→</span></span></div>

@@ -6,6 +6,8 @@ const tools = [
   ['SMART Target Builder', 'SMARTTargetBuilder'],
   ['Progress Tracking Builder', 'ProgressPointBuilder'],
   ['CPD Finder', 'CPD-Finder'],
+  ['Assessment Record Builder', 'AssessmentRecordBuilder'],
+  ['Exam Booker', 'exam-booker'],
   ['Evidence, Please', 'evidence-please']
 ];
 const headers = { Accept: 'application/vnd.github+json', 'User-Agent': 'toolkit-update-aggregator' };
