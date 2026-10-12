@@ -102,12 +102,25 @@ h2 { font-size: clamp(1.75rem, 1.25rem + 1.2vw, 2.5rem); line-height: 1.16; lett
 .principles span { font-size: .8125rem; color: var(--secondary); }
 .principles h3 { font-size: 1rem; line-height: 1.4; margin-block: 16px 8px; text-wrap: initial; }
 .principles p { font-size: .9375rem; color: var(--secondary); margin-bottom: 0; }
-.idea-strip { padding-block: 40px; background: var(--surface); border-block: 1px solid var(--border); }
+/* A confident navy closing section, consistent in light and dark appearance. */
+.idea-strip, .site-footer {
+  --text: #ffffff;
+  --secondary: #bdcbe0;
+  --accent: #ff83bd;
+  --border: #344561;
+  background: #07152e;
+  color: var(--text);
+}
+.idea-strip { padding-block: 56px; border-top: 4px solid #ff3f9a; }
+.idea-strip .section-number { color: var(--accent); }
+.idea-strip .button { background: #ff3f9a; color: #07152e; flex-shrink: 0; }
+.idea-strip .button:hover { background: #ff83bd; }
 .idea-inner { display: flex; align-items: center; justify-content: space-between; gap: 32px; }
-.idea-inner h2 { max-width: 28ch; font-size: 1.75rem; }
+.idea-inner h2 { max-width: 24ch; font-size: clamp(2rem, 1.5rem + 2vw, 3.25rem); }
 .button { display: inline-flex; justify-content: center; align-items: center; gap: 12px; padding: 12px 20px; min-height: 44px; background: var(--accent); color: #fff; border: 1px solid transparent; border-radius: 999px; font-size: .9375rem; font-weight: 600; text-decoration: none; }
 .button:hover { text-decoration: underline; text-underline-offset: 4px; }
-.site-footer { padding-block: 40px 24px; }
+.site-footer { padding-block: 32px 24px; }
+.site-footer .footer-brand { font-size: 1.125rem; }
 .footer-main { display: grid; grid-template-columns: 1fr 1fr auto; gap: 32px; align-items: start; padding-bottom: 32px; }
 .footer-main p { color: var(--secondary); font-size: .9375rem; margin: 0; }
 .footer-links { display: flex; flex-direction: column; align-items: flex-start; }
