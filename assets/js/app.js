@@ -10,7 +10,7 @@ function renderTools() {
   const grid = document.querySelector('[data-tool-grid]');
   if (!grid || !Array.isArray(window.TOOLKIT_TOOLS)) return;
   grid.innerHTML = window.TOOLKIT_TOOLS.map((tool, index) => `
-    <a class="tool-card ${tool.variant === 'evidence' ? 'evidence-card' : ''}" style="--accent:${tool.accent}" href="${tool.url}" target="_blank" rel="noopener noreferrer" aria-label="${tool.cta}: ${tool.title}">
+    <a class="tool-card" style="--tool-accent:${tool.accent}" href="${tool.url}" target="_blank" rel="noopener noreferrer" aria-label="${tool.title} — ${tool.cta} (opens in a new tab)">
       <div class="card-top"><span class="card-index">0${index + 1}</span><span class="tool-icon">${icons[tool.icon] || icons.target}</span></div>
       <div class="card-copy"><p class="category">${tool.category}</p><h3>${tool.title}</h3><p>${tool.description}</p></div>
       <div class="card-footer"><div class="tags">${(tool.tags || []).map(tag => `<span>${tag}</span>`).join('')}</div><span class="card-cta">${tool.cta} <span aria-hidden="true">→</span></span></div>
@@ -37,12 +37,31 @@ function renderUpdates(items) {
 }
 
 async function loadUpdates() {
+  const region = document.querySelector('[data-updates]');
+  if (!region || region.getAttribute('aria-busy') === 'true') return;
+  const retrying = region.contains(document.activeElement);
+  region.setAttribute('aria-busy', 'true');
+  region.innerHTML = '<div class="updates-state">Checking for recent updates…</div>';
   try {
-    const response = await fetch('data/updates.json', { cache: 'no-store' });
+    const response = await fetch('data/updates.json', { cache: 'no-store', signal: AbortSignal.timeout(10000) });
     if (!response.ok) throw new Error('No updates file');
     const data = await response.json();
-    renderUpdates(Array.isArray(data) ? data : data.updates);
-  } catch (_) { renderUpdates([]); }
+    const items = Array.isArray(data) ? data : data.updates;
+    if (!Array.isArray(items)) throw new Error('Invalid updates data');
+    renderUpdates(items);
+    if (retrying) {
+      const heading = document.querySelector('#updates-title');
+      heading.setAttribute('tabindex', '-1');
+      heading.focus({ preventScroll: true });
+    }
+  } catch (_) {
+    region.innerHTML = '<div class="updates-state"><strong>Updates couldn’t be loaded.</strong><span>The tools are still available. Check your connection and try again.</span><button class="button retry-button" type="button" data-retry-updates>Try again</button></div>';
+    const retry = region.querySelector('[data-retry-updates]');
+    retry.addEventListener('click', loadUpdates);
+    if (retrying) retry.focus({ preventScroll: true });
+  } finally {
+    region.setAttribute('aria-busy', 'false');
+  }
 }
 
 function setupNavigation() {
@@ -51,6 +70,13 @@ function setupNavigation() {
   if (!button || !nav) return;
   button.addEventListener('click', () => { const open = button.getAttribute('aria-expanded') === 'true'; button.setAttribute('aria-expanded', String(!open)); nav.classList.toggle('is-open', !open); });
   nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => { button.setAttribute('aria-expanded', 'false'); nav.classList.remove('is-open'); }));
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && button.getAttribute('aria-expanded') === 'true') {
+      button.setAttribute('aria-expanded', 'false');
+      nav.classList.remove('is-open');
+      button.focus();
+    }
+  });
 }
 
 renderTools();
