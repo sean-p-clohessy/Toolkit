@@ -1,6 +1,24 @@
 {
-  "generatedAt": "2026-10-12T09:38:58.688Z",
+  "generatedAt": "2026-10-16T16:39:29.624Z",
   "updates": [
+    {
+      "tool": "CPD Finder",
+      "repository": "CPD-Finder",
+      "type": "commit",
+      "summary": "Fix VTCT collection by requesting uncompressed pages",
+      "url": "https://github.com/sean-p-clohessy/CPD-Finder/commit/1d497599b984a322d0927dc42da608dd086804a8",
+      "timestamp": "2026-10-16T12:33:37Z",
+      "author": "Sean Clohessy"
+    },
+    {
+      "tool": "CPD Finder",
+      "repository": "CPD-Finder",
+      "type": "commit",
+      "summary": "Add Ascentis events with complete pagination and direct booking links",
+      "url": "https://github.com/sean-p-clohessy/CPD-Finder/commit/2f79e4ee0537b6cade045f2d7c660b6f4ee65b61",
+      "timestamp": "2026-10-16T12:20:45Z",
+      "author": "Sean Clohessy"
+    },
     {
       "tool": "SMART Target Builder",
       "repository": "SMARTTargetBuilder",
@@ -71,24 +89,6 @@
       "summary": "Add account-free footer visits counter",
       "url": "https://github.com/sean-p-clohessy/SMARTTargetBuilder/commit/63f0e6a224b93966214f98553cb8fb9dc06e6382",
       "timestamp": "2026-10-09T13:14:04Z",
-      "author": "Sean Clohessy"
-    },
-    {
-      "tool": "Exam Booker",
-      "repository": "exam-booker",
-      "type": "commit",
-      "summary": "Make learner access arrangements collapsible",
-      "url": "https://github.com/sean-p-clohessy/exam-booker/commit/3b9201ac94180949a9ea845d24a32ae6f12950c0",
-      "timestamp": "2026-09-18T07:33:27Z",
-      "author": "Sean Clohessy"
-    },
-    {
-      "tool": "Exam Booker",
-      "repository": "exam-booker",
-      "type": "commit",
-      "summary": "Clarify access arrangements using JCQ terminology",
-      "url": "https://github.com/sean-p-clohessy/exam-booker/commit/7b1134c98ad194b25af963a9db92a4826aead7d5",
-      "timestamp": "2026-09-18T07:19:51Z",
       "author": "Sean Clohessy"
     }
   ]
