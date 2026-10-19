@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-16T16:39:29.624Z",
+  "generatedAt": "2026-10-19T13:14:47.707Z",
   "updates": [
     {
       "tool": "CPD Finder",
@@ -65,15 +65,6 @@
       "author": "Sean Clohessy"
     },
     {
-      "tool": "CPD Finder",
-      "repository": "CPD-Finder",
-      "type": "commit",
-      "summary": "Refresh CPD Finder with Apple-inspired utility design",
-      "url": "https://github.com/sean-p-clohessy/CPD-Finder/commit/3eb4b31b5b4c1cbc859de0610654572d90e5f7f3",
-      "timestamp": "2026-10-12T07:36:06Z",
-      "author": "Sean Clohessy"
-    },
-    {
       "tool": "Progress Tracking Builder",
       "repository": "ProgressPointBuilder",
       "type": "commit",
@@ -89,6 +80,15 @@
       "summary": "Add account-free footer visits counter",
       "url": "https://github.com/sean-p-clohessy/SMARTTargetBuilder/commit/63f0e6a224b93966214f98553cb8fb9dc06e6382",
       "timestamp": "2026-10-09T13:14:04Z",
+      "author": "Sean Clohessy"
+    },
+    {
+      "tool": "Exam Booker",
+      "repository": "exam-booker",
+      "type": "commit",
+      "summary": "Make learner access arrangements collapsible",
+      "url": "https://github.com/sean-p-clohessy/exam-booker/commit/3b9201ac94180949a9ea845d24a32ae6f12950c0",
+      "timestamp": "2026-09-18T07:33:27Z",
       "author": "Sean Clohessy"
     }
   ]
