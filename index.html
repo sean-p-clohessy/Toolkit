@@ -15,9 +15,9 @@
   <meta property="og:url" content="https://edutools.uk/">
   <title>Toolkit — Tools for getting the job done</title>
   <link rel="icon" href="assets/favicon.svg?v=2" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/css/styles.css?v=10">
+  <link rel="stylesheet" href="assets/css/styles.css?v=13">
   <script src="assets/js/config.js?v=4" defer></script>
-  <script src="assets/js/app.js?v=6" defer></script>
+  <script src="assets/js/app.js?v=8" defer></script>
   <script src="assets/js/visits.js?v=1" defer></script>
 </head>
 <body>
@@ -45,6 +45,13 @@
           <h1>Tools for getting<br>the <span>job done.</span></h1>
           <div class="hero-support">
             <p class="hero-intro">Practical tools built to solve real problems in education.</p>
+            <div class="task-picker" data-task-picker hidden>
+              <label for="tool-task">I need to…</label>
+              <div class="task-picker-controls">
+                <select id="tool-task" data-task-select></select>
+                <a class="button task-picker-open" data-task-open target="_blank" rel="noopener noreferrer">Open tool <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
             <a class="hero-link" href="#tools">Explore the tools <span aria-hidden="true">↓</span></a>
           </div>
         </div>

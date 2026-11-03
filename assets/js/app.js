@@ -19,6 +19,39 @@ function renderTools() {
     </a>`).join('');
 }
 
+function setupTaskPicker() {
+  const picker = document.querySelector('[data-task-picker]');
+  if (!picker || !Array.isArray(window.TOOLKIT_TOOLS) || !window.TOOLKIT_TOOLS.length) return;
+  const select = picker.querySelector('[data-task-select]');
+  const link = picker.querySelector('[data-task-open]');
+  const tasks = {
+    'smart-target-builder': 'Write SMART targets',
+    'progress-tracking-builder': 'Track learner progress',
+    'ehcp-outcome-cruncher': 'Work with EHCP outcomes',
+    'cpd-finder': 'Find professional development',
+    'assessment-record-builder': 'Create assessment records',
+    'exam-booker': 'Prepare an exam request',
+    'evidence-please': 'Practise checking evidence'
+  };
+  const tools = window.TOOLKIT_TOOLS;
+  tools.forEach(tool => {
+    const option = document.createElement('option');
+    option.value = tool.id;
+    option.textContent = tasks[tool.id] || tool.title;
+    select.append(option);
+  });
+  const update = () => {
+    const tool = tools.find(item => item.id === select.value);
+    if (!tool) return;
+    link.href = tool.url;
+    link.setAttribute('aria-label', `${tool.cta}: ${tool.title} (opens in a new tab)`);
+    link.firstChild.textContent = `${tool.cta} `;
+  };
+  select.addEventListener('change', update);
+  update();
+  picker.hidden = false;
+}
+
 function cleanSummary(message) {
   const firstLine = String(message || '').split('\n')[0].replace(/^(feat|fix|docs|style|refactor|perf|test|build|ci|chore)(\([^)]*\))?!?:\s*/i, '');
   return firstLine ? firstLine.charAt(0).toUpperCase() + firstLine.slice(1) : 'Project update';
@@ -81,7 +114,68 @@ function setupNavigation() {
   });
 }
 
+function setupTileLight() {
+  const cards = [...document.querySelectorAll('.tool-card')];
+  const enabled = matchMedia('(hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)');
+  let frame = 0, pointer = null, lastRipple = 0;
+  const ripples = new Map();
+  const clear = () => {
+    cancelAnimationFrame(frame);
+    frame = 0;
+    pointer = null;
+    cards.forEach(card => card.style.setProperty('--light-on', '0'));
+    ripples.forEach(({animation}) => animation?.cancel());
+  };
+  function paint(now) {
+    frame = 0;
+    if (!pointer || !enabled.matches) return;
+    // Read geometry together before writing styles; no idle animation loop.
+    const positions = cards.map(card => ({card, rect: card.getBoundingClientRect()}));
+    positions.forEach(({card, rect}) => {
+      const x = pointer.x - rect.left, y = pointer.y - rect.top;
+      const nearby = rect.bottom > 0 && rect.top < innerHeight && x > -180 && y > -180 && x < rect.width + 180 && y < rect.height + 180;
+      card.style.setProperty('--light-on', nearby ? '1' : '0');
+      if (!nearby) return;
+      card.style.setProperty('--light-x', `${x}px`);
+      card.style.setProperty('--light-y', `${y}px`);
+      if (x < 0 || y < 0 || x > rect.width || y > rect.height || now - lastRipple < 800) return;
+      let ripple = ripples.get(card);
+      if (ripple && Math.hypot(x - ripple.x, y - ripple.y) < 90) return;
+      if (!ripple) {
+        const element = document.createElement('span');
+        element.className = 'tile-ripple';
+        element.setAttribute('aria-hidden', 'true');
+        card.append(element);
+        ripple = {element};
+        ripples.set(card, ripple);
+      }
+      ripple.animation?.cancel();
+      ripple.x = x; ripple.y = y;
+      ripple.element.style.left = `${x - 120}px`;
+      ripple.element.style.top = `${y - 120}px`;
+      ripple.animation = ripple.element.animate([
+        {transform: 'scale(.15)', opacity: 0},
+        {transform: 'scale(.5)', opacity: .45, offset: .2},
+        {transform: 'scale(2.4)', opacity: 0}
+      ], {duration: 1000, easing: 'cubic-bezier(.2,.7,.3,1)'});
+      lastRipple = now;
+    });
+  }
+  document.addEventListener('pointermove', event => {
+    if (!enabled.matches || event.pointerType === 'touch') return;
+    pointer = {x: event.clientX, y: event.clientY};
+    if (!frame) frame = requestAnimationFrame(paint);
+  }, {passive: true});
+  document.documentElement.addEventListener('pointerleave', clear);
+  window.addEventListener('blur', clear);
+  window.addEventListener('scroll', clear, {passive: true});
+  enabled.addEventListener('change', clear);
+  document.addEventListener('visibilitychange', () => { if (document.hidden) clear(); });
+}
+
 renderTools();
+setupTileLight();
+setupTaskPicker();
 loadUpdates();
 setupNavigation();
 document.querySelector('[data-year]').textContent = new Date().getFullYear();
