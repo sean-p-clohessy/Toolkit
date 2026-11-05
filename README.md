@@ -14,7 +14,7 @@ If the repository should appear in the update feed, also add its display name an
 
 ## Automatic updates
 
-The catalogue contains six practical tools and Evidence, Please, a training game. Desktop uses two rows of three practical tools followed by a full-width game card. Tablet uses two columns; mobile uses a single column. Assessment Record Builder offers Games Design, Media and Photography within one independent application. Exam Booker prepares a downloadable Word booking request.
+The catalogue contains six practical tools and two training games: Evidence, Please and Riverside Service Desk. Desktop uses two rows of three practical tools followed by full-width game cards. Tablet uses two columns; mobile uses a single column. Assessment Record Builder offers Games Design, Media and Photography within one independent application. Exam Booker prepares a downloadable Word booking request. Riverside Service Desk lets learners investigate IT support tickets and practise working with computer components.
 
 `.github/workflows/update-feed.yml` runs every six hours and can also be triggered manually. It uses the repository-scoped GitHub Actions token on the server, retrieves recent public commits for each configured tool, removes merge/dependency noise, and writes the ten newest meaningful entries to `data/updates.json`. It commits only when the generated file changes, then deploys the current site directly to GitHub Pages so automated feed updates become visible without a second workflow trigger. No GitHub credential is exposed to the browser.
 

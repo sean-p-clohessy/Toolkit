@@ -82,6 +82,19 @@ window.TOOLKIT_TOOLS = [
     icon: "document",
     tags: ["LIVE"],
     cta: "Play game",
-    variant: "evidence"
+    variant: "game"
+  },
+  {
+    id: "riverside-service-desk",
+    title: "Riverside Service Desk",
+    category: "Games & Training",
+    description: "Investigate IT support tickets, gather evidence and learn about computer components in a hands-on service desk game.",
+    url: "https://sean-p-clohessy.github.io/riverside-service-desk/",
+    repo: "riverside-service-desk",
+    accent: "#65b5ff",
+    icon: "clipboard",
+    tags: ["LIVE"],
+    cta: "Play game",
+    variant: "game"
   }
 ];

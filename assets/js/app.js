@@ -12,7 +12,7 @@ function renderTools() {
   const grid = document.querySelector('[data-tool-grid]');
   if (!grid || !Array.isArray(window.TOOLKIT_TOOLS)) return;
   grid.innerHTML = window.TOOLKIT_TOOLS.map((tool, index) => `
-    <a class="tool-card${tool.variant === 'evidence' ? ' tool-card--game' : ''}" style="--tool-accent:${tool.accent}" href="${tool.url}" target="_blank" rel="noopener noreferrer" aria-label="${tool.title} — ${tool.cta} (opens in a new tab)">
+    <a class="tool-card${tool.variant === 'game' ? ' tool-card--game' : ''}" style="--tool-accent:${tool.accent}" href="${tool.url}" target="_blank" rel="noopener noreferrer" aria-label="${tool.title} — ${tool.cta} (opens in a new tab)">
       <div class="card-top"><span class="card-index">0${index + 1}</span><span class="tool-icon">${icons[tool.icon] || icons.target}</span></div>
       <div class="card-copy"><p class="category">${tool.category}</p><h3>${tool.title}</h3><p>${tool.description}</p></div>
       <div class="card-footer"><div class="tags">${(tool.tags || []).map(tag => `<span>${tag}</span>`).join('')}</div><span class="card-cta">${tool.cta} <span aria-hidden="true">→</span></span></div>
@@ -31,7 +31,8 @@ function setupTaskPicker() {
     'cpd-finder': 'Find professional development',
     'assessment-record-builder': 'Create assessment records',
     'exam-booker': 'Prepare an exam request',
-    'evidence-please': 'Practise checking evidence'
+    'evidence-please': 'Practise checking evidence',
+    'riverside-service-desk': 'Practise IT support'
   };
   const tools = window.TOOLKIT_TOOLS;
   tools.forEach(tool => {

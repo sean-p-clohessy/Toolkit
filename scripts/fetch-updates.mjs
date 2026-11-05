@@ -8,7 +8,8 @@ const tools = [
   ['CPD Finder', 'CPD-Finder'],
   ['Assessment Record Builder', 'AssessmentRecordBuilder'],
   ['Exam Booker', 'exam-booker'],
-  ['Evidence, Please', 'evidence-please']
+  ['Evidence, Please', 'evidence-please'],
+  ['Riverside Service Desk', 'riverside-service-desk']
 ];
 const headers = { Accept: 'application/vnd.github+json', 'User-Agent': 'toolkit-update-aggregator' };
 if (process.env.GITHUB_TOKEN) headers.Authorization = `Bearer ${process.env.GITHUB_TOKEN}`;
