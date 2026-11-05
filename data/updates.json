@@ -1,6 +1,51 @@
 {
-  "generatedAt": "2026-10-26T13:02:05.561Z",
+  "generatedAt": "2026-11-05T19:56:52.907Z",
   "updates": [
+    {
+      "tool": "Riverside Service Desk",
+      "repository": "riverside-service-desk",
+      "type": "commit",
+      "summary": "Keep application synonyms distinct from unrelated words",
+      "url": "https://github.com/sean-p-clohessy/riverside-service-desk/commit/2714f1ff000f01589a8b57464639753f436de1d4",
+      "timestamp": "2026-11-05T09:02:16Z",
+      "author": "Sean Clohessy"
+    },
+    {
+      "tool": "Riverside Service Desk",
+      "repository": "riverside-service-desk",
+      "type": "commit",
+      "summary": "Make reasoning feedback explicit and accept natural learner explanations",
+      "url": "https://github.com/sean-p-clohessy/riverside-service-desk/commit/7144084cbd694da7a7d740d2867971f5e5b1c215",
+      "timestamp": "2026-11-05T09:00:31Z",
+      "author": "Sean Clohessy"
+    },
+    {
+      "tool": "Riverside Service Desk",
+      "repository": "riverside-service-desk",
+      "type": "commit",
+      "summary": "Add confirmed shift reset to startup profile chooser",
+      "url": "https://github.com/sean-p-clohessy/riverside-service-desk/commit/1a63d99c56398a499287cdccba2bae14c2ad16c5",
+      "timestamp": "2026-11-05T08:33:27Z",
+      "author": "Sean Clohessy"
+    },
+    {
+      "tool": "Riverside Service Desk",
+      "repository": "riverside-service-desk",
+      "type": "commit",
+      "summary": "Record public Pages deployment and learner isolation validation",
+      "url": "https://github.com/sean-p-clohessy/riverside-service-desk/commit/7bfa8ac3c412cfe9ba91c82136b9a10e6e68c947",
+      "timestamp": "2026-11-05T08:30:59Z",
+      "author": "Sean Clohessy"
+    },
+    {
+      "tool": "Riverside Service Desk",
+      "repository": "riverside-service-desk",
+      "type": "commit",
+      "summary": "Build Riverside learning service desk with local profiles and Pages deployment",
+      "url": "https://github.com/sean-p-clohessy/riverside-service-desk/commit/eb373e533e17d95b4797152199522ac849aec9cf",
+      "timestamp": "2026-11-05T08:27:08Z",
+      "author": "Sean Clohessy"
+    },
     {
       "tool": "SMART Target Builder",
       "repository": "SMARTTargetBuilder",
@@ -44,51 +89,6 @@
       "summary": "Apply Apple-inspired Workbench design",
       "url": "https://github.com/sean-p-clohessy/EHCP-Outcome-Cruncher/commit/e55491995308caf03e71b0840a98b560049adf3a",
       "timestamp": "2026-10-12T07:36:36Z",
-      "author": "Sean Clohessy"
-    },
-    {
-      "tool": "Progress Tracking Builder",
-      "repository": "ProgressPointBuilder",
-      "type": "commit",
-      "summary": "Add account-free footer visits counter",
-      "url": "https://github.com/sean-p-clohessy/ProgressPointBuilder/commit/8b37448178f9d820516a5022ca825a5d255bcdbc",
-      "timestamp": "2026-10-09T13:14:07Z",
-      "author": "Sean Clohessy"
-    },
-    {
-      "tool": "SMART Target Builder",
-      "repository": "SMARTTargetBuilder",
-      "type": "commit",
-      "summary": "Add account-free footer visits counter",
-      "url": "https://github.com/sean-p-clohessy/SMARTTargetBuilder/commit/63f0e6a224b93966214f98553cb8fb9dc06e6382",
-      "timestamp": "2026-10-09T13:14:04Z",
-      "author": "Sean Clohessy"
-    },
-    {
-      "tool": "Exam Booker",
-      "repository": "exam-booker",
-      "type": "commit",
-      "summary": "Make learner access arrangements collapsible",
-      "url": "https://github.com/sean-p-clohessy/exam-booker/commit/3b9201ac94180949a9ea845d24a32ae6f12950c0",
-      "timestamp": "2026-09-18T07:33:27Z",
-      "author": "Sean Clohessy"
-    },
-    {
-      "tool": "Exam Booker",
-      "repository": "exam-booker",
-      "type": "commit",
-      "summary": "Clarify access arrangements using JCQ terminology",
-      "url": "https://github.com/sean-p-clohessy/exam-booker/commit/7b1134c98ad194b25af963a9db92a4826aead7d5",
-      "timestamp": "2026-09-18T07:19:51Z",
-      "author": "Sean Clohessy"
-    },
-    {
-      "tool": "Exam Booker",
-      "repository": "exam-booker",
-      "type": "commit",
-      "summary": "Support multiple sessions in window exam bookings",
-      "url": "https://github.com/sean-p-clohessy/exam-booker/commit/ab5dfe8fac121a3e8003d6dc634211c431311b39",
-      "timestamp": "2026-09-17T11:34:45Z",
       "author": "Sean Clohessy"
     }
   ]
