@@ -89,7 +89,7 @@ window.TOOLKIT_TOOLS = [
     title: "Riverside Service Desk",
     category: "Games & Training",
     description: "Investigate IT support tickets, gather evidence and learn about computer components in a hands-on service desk game.",
-    url: "https://sean-p-clohessy.github.io/riverside-service-desk/",
+    url: "./itsupport/",
     repo: "riverside-service-desk",
     accent: "#65b5ff",
     icon: "clipboard",

@@ -37,10 +37,7 @@ jobs:
           git commit -m "chore: refresh tool updates"
           git pull --rebase origin main
           git push
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: .
+      - uses: ./.github/actions/prepare-pages
       - name: Deploy GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

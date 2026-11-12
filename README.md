@@ -24,6 +24,8 @@ The homepage reads this static JSON and displays a graceful empty state before t
 
 `.github/workflows/pages.yml` deploys the static site on each push to `main`. In the repository settings, set **Pages → Build and deployment → Source** to **GitHub Actions** if it is not selected automatically.
 
+[Riverside Service Desk](https://edutools.uk/itsupport/) is built from the [Riverside repository](https://github.com/sean-p-clohessy/riverside-service-desk) with Vite base `/itsupport/`. Both Toolkit Pages workflows include it in the deployed site. After a Riverside change reaches `main`, run **Deploy GitHub Pages** to publish it immediately, or wait for the next scheduled feed refresh.
+
 ## Visit counter
 
 The footer uses the same account-free Hits service as CPD Finder, with a separate counter for `edutools.uk`. `assets/js/visits.js` loads the badge once per page load on the published Toolkit domains only. Local previews do not count, and all supported domains use one shared total. Clicking the badge opens the public totals on Hits.

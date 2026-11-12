@@ -1,0 +1,36 @@
+name: Prepare Toolkit Pages artifact
+description: Build Riverside Service Desk and include it in the Toolkit site.
+runs:
+  using: composite
+  steps:
+    - name: Check out Riverside Service Desk
+      uses: actions/checkout@v7
+      with:
+        repository: sean-p-clohessy/riverside-service-desk
+        ref: main
+        path: .riverside-source
+        persist-credentials: false
+    - name: Install Node LTS for Riverside
+      uses: actions/setup-node@v7
+      with:
+        node-version: lts/*
+        cache: npm
+        cache-dependency-path: .riverside-source/package-lock.json
+    - name: Test and build Riverside for /itsupport/
+      shell: bash
+      working-directory: .riverside-source
+      run: |
+        npm ci
+        npm test
+        npm run build -- --base=/itsupport/
+    - name: Assemble the Toolkit site
+      shell: bash
+      run: |
+        site="$RUNNER_TEMP/toolkit-pages"
+        mkdir -p "$site/itsupport"
+        git archive HEAD | tar -xf - -C "$site"
+        cp -a .riverside-source/dist/. "$site/itsupport/"
+    - uses: actions/configure-pages@v5
+    - uses: actions/upload-pages-artifact@v3
+      with:
+        path: ${{ runner.temp }}/toolkit-pages
