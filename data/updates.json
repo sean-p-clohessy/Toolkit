@@ -1,6 +1,15 @@
 {
-  "generatedAt": "2026-11-05T19:56:52.907Z",
+  "generatedAt": "2026-11-12T07:09:54.107Z",
   "updates": [
+    {
+      "tool": "Riverside Service Desk",
+      "repository": "riverside-service-desk",
+      "type": "commit",
+      "summary": "Add Week 8 peripherals lab and archive Week 7",
+      "url": "https://github.com/sean-p-clohessy/riverside-service-desk/commit/581803a9428f22c033c8f095f02014f5f1901fc0",
+      "timestamp": "2026-11-11T19:56:00Z",
+      "author": "Sean Clohessy"
+    },
     {
       "tool": "Riverside Service Desk",
       "repository": "riverside-service-desk",
@@ -80,15 +89,6 @@
       "summary": "Refine assessment interface with Apple-inspired design",
       "url": "https://github.com/sean-p-clohessy/AssessmentRecordBuilder/commit/4064ce51faa6cd94781640d6ae578daadfd1dc13",
       "timestamp": "2026-10-12T07:37:30Z",
-      "author": "Sean Clohessy"
-    },
-    {
-      "tool": "EHCP Outcome Cruncher",
-      "repository": "EHCP-Outcome-Cruncher",
-      "type": "commit",
-      "summary": "Apply Apple-inspired Workbench design",
-      "url": "https://github.com/sean-p-clohessy/EHCP-Outcome-Cruncher/commit/e55491995308caf03e71b0840a98b560049adf3a",
-      "timestamp": "2026-10-12T07:36:36Z",
       "author": "Sean Clohessy"
     }
   ]
