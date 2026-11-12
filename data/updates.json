@@ -1,6 +1,24 @@
 {
-  "generatedAt": "2026-11-12T07:09:54.107Z",
+  "generatedAt": "2026-11-12T19:53:27.868Z",
   "updates": [
+    {
+      "tool": "Riverside Service Desk",
+      "repository": "riverside-service-desk",
+      "type": "commit",
+      "summary": "Keep collapsed navigation out of the keyboard path",
+      "url": "https://github.com/sean-p-clohessy/riverside-service-desk/commit/4c7bc8baa8b8ea82b00c1cda400e05912c2dea0d",
+      "timestamp": "2026-11-12T15:12:24Z",
+      "author": "Sean Clohessy"
+    },
+    {
+      "tool": "Riverside Service Desk",
+      "repository": "riverside-service-desk",
+      "type": "commit",
+      "summary": "Add Riverside accessibility settings and diagram magnifier",
+      "url": "https://github.com/sean-p-clohessy/riverside-service-desk/commit/edebaff21bc24280d721d75539f0fc4711ca9dea",
+      "timestamp": "2026-11-12T15:09:40Z",
+      "author": "Sean Clohessy"
+    },
     {
       "tool": "Riverside Service Desk",
       "repository": "riverside-service-desk",
@@ -71,24 +89,6 @@
       "summary": "Restore restrained grade colours and teal accents",
       "url": "https://github.com/sean-p-clohessy/AssessmentRecordBuilder/commit/1dc5ff39cdd3e90a3f82e4ca9b95fe5ad0140fdd",
       "timestamp": "2026-10-12T09:21:53Z",
-      "author": "Sean Clohessy"
-    },
-    {
-      "tool": "SMART Target Builder",
-      "repository": "SMARTTargetBuilder",
-      "type": "commit",
-      "summary": "Apply Apple-inspired interface design",
-      "url": "https://github.com/sean-p-clohessy/SMARTTargetBuilder/commit/62252e5e8534433e2a61973ab8f20a05c070833d",
-      "timestamp": "2026-10-12T07:42:20Z",
-      "author": "Sean Clohessy"
-    },
-    {
-      "tool": "Assessment Record Builder",
-      "repository": "AssessmentRecordBuilder",
-      "type": "commit",
-      "summary": "Refine assessment interface with Apple-inspired design",
-      "url": "https://github.com/sean-p-clohessy/AssessmentRecordBuilder/commit/4064ce51faa6cd94781640d6ae578daadfd1dc13",
-      "timestamp": "2026-10-12T07:37:30Z",
       "author": "Sean Clohessy"
     }
   ]
