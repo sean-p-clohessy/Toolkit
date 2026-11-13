@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en-GB" data-colour-scheme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A 30-minute Level 3 lab for tracing arrays, lists, stacks and queues in memory.">
+  <title>Data Structures Lab | EduTools</title>
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./lab.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to lab</a>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="brand" href="../">EduTools</a>
+      <button type="button" id="display-open" aria-haspopup="dialog">Display settings</button>
+    </div>
+  </header>
+  <main id="main" class="wrap" tabindex="-1">
+    <div class="intro">
+      <div>
+        <p class="eyebrow">Level 3 · 30 minutes</p>
+        <h1>Data Structures Lab</h1>
+        <p>Predict an operation, run it and explain what changed in memory.</p>
+      </div>
+      <fieldset class="representation">
+        <legend>Show stored values in</legend>
+        <div class="segmented">
+          <label><input type="radio" name="format" value="decimal" checked><span>Decimal</span></label>
+          <label><input type="radio" name="format" value="binary"><span>Binary</span></label>
+          <label><input type="radio" name="format" value="hex"><span>Hex</span></label>
+        </div>
+        <p class="small muted">The bits and addresses stay the same.</p>
+      </fieldset>
+    </div>
+
+    <nav aria-label="Lab activities" class="activities">
+      <a href="#memory" data-stage="memory"><span>01</span> Inspect memory</a>
+      <a href="#flow" data-stage="flow"><span>02</span> Stack vs queue</a>
+      <a href="#choose" data-stage="choose"><span>03</span> Choose and explain</a>
+    </nav>
+
+    <section class="stage" id="stage-memory" aria-labelledby="memory-heading">
+      <div class="stage-heading">
+        <h2 id="memory-heading" tabindex="-1">Inspect memory</h2>
+        <p>Predict the address of array index 2, then find the third value in both models. Before inserting 15, predict which values will move.</p>
+      </div>
+      <div class="comparison">
+        <article class="panel" aria-labelledby="array-heading">
+          <div class="panel-heading">
+            <h3 id="array-heading">Array-backed list</h3>
+            <span class="model-label">Consecutive slots</span>
+          </div>
+          <p>Each slot in this model takes one byte. The list can grow by moving to a larger backing array.</p>
+          <div class="diagram" id="array-diagram"></div>
+          <p class="rule">Address = start address + index × bytes per slot</p>
+          <div class="trace-controls">
+            <p class="trace-result" id="array-result" aria-live="polite"></p>
+            <p class="next-action" id="array-next"></p>
+            <div class="button-row">
+              <button type="button" class="primary" id="array-step" aria-describedby="array-next">Step array</button>
+              <button type="button" id="array-reset">Reset array</button>
+            </div>
+          </div>
+        </article>
+        <article class="panel" aria-labelledby="linked-heading">
+          <div class="panel-heading">
+            <h3 id="linked-heading">Linked list</h3>
+            <span class="model-label">Nodes and links</span>
+          </div>
+          <p>Each node holds a value and the address of the next node. The head points to the first node.</p>
+          <div class="diagram" id="linked-diagram"></div>
+          <p class="rule">To find index 2, start at the head and follow two links.</p>
+          <div class="trace-controls">
+            <p class="trace-result" id="linked-result" aria-live="polite"></p>
+            <p class="next-action" id="linked-next"></p>
+            <div class="button-row">
+              <button type="button" class="primary" id="linked-step" aria-describedby="linked-next">Step linked list</button>
+              <button type="button" id="linked-reset">Reset linked list</button>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="takeaway">
+        <p><strong>Explain the trade-off.</strong> An array can jump straight to a known index. A linked list can insert by changing links once the insertion point is known.</p>
+        <a class="button" href="#flow">Next · Stack vs queue</a>
+      </div>
+    </section>
+
+    <section class="stage" id="stage-flow" aria-labelledby="flow-heading" hidden>
+      <div class="stage-heading">
+        <h2 id="flow-heading" tabindex="-1">Stack vs queue</h2>
+        <p>Step through the same operations on both structures. Predict which value comes out first.</p>
+      </div>
+      <div class="comparison">
+        <article class="panel" aria-labelledby="stack-heading">
+          <div class="panel-heading">
+            <h3 id="stack-heading">Stack</h3>
+            <span class="model-label">Last in, first out</span>
+          </div>
+          <p>Push and pop both happen at the top.</p>
+          <div class="diagram" id="stack-diagram"></div>
+          <p class="rule" id="stack-rule"></p>
+        </article>
+        <article class="panel" aria-labelledby="queue-heading">
+          <div class="panel-heading">
+            <h3 id="queue-heading">Circular queue</h3>
+            <span class="model-label">First in, first out</span>
+          </div>
+          <p>Enqueue at the rear and dequeue from the front. The next write wraps to the first slot when there is room.</p>
+          <div class="diagram" id="queue-diagram"></div>
+          <p class="rule" id="queue-rule"></p>
+        </article>
+      </div>
+      <div class="panel flow-console">
+        <p class="trace-result" id="flow-result" aria-live="polite"></p>
+        <p class="next-action" id="flow-next"></p>
+        <fieldset class="prediction" id="prediction" hidden>
+          <legend>Which value comes out first?</legend>
+          <label>Stack <select id="predict-stack"></select></label>
+          <label>Queue <select id="predict-queue"></select></label>
+        </fieldset>
+        <p id="prediction-feedback" role="status" hidden></p>
+        <div class="button-row">
+          <button type="button" class="primary" id="flow-step" aria-describedby="flow-next">Step both</button>
+          <button type="button" id="flow-reset">Reset both</button>
+        </div>
+      </div>
+      <div class="takeaway">
+        <p><strong>Watch the queue after the removal.</strong> The front moves. Later, a new value uses the freed slot and goes to the back of the queue.</p>
+        <a class="button" href="#choose">Next · Choose and explain</a>
+      </div>
+    </section>
+
+    <section class="stage" id="stage-choose" aria-labelledby="choose-heading" hidden>
+      <div class="stage-heading">
+        <h2 id="choose-heading" tabindex="-1">Choose and explain</h2>
+        <p>Match each job to a structure. Use something you observed to explain one of your choices.</p>
+      </div>
+      <div class="choice-grid" id="choice-grid"></div>
+      <details class="panel extra-structures">
+        <summary>Quick look · Sets and records</summary>
+        <div class="comparison">
+          <div>
+            <h3>Set</h3>
+            <p>A collection of unique values. Adding job 42 again leaves the completed-job set <code>{10, 20, 42}</code> with three entries.</p>
+          </div>
+          <div>
+            <h3>Record</h3>
+            <p>Named fields describe one item. A print job can have <code>ID: 42</code>, <code>pages: 2</code> and <code>status: waiting</code>. A print queue can hold job records.</p>
+          </div>
+        </div>
+      </details>
+      <section class="panel evidence" aria-labelledby="evidence-heading">
+        <h3 id="evidence-heading">Prepare your three slides</h3>
+        <ol>
+          <li>Compare an array-backed list and a linked list. Show how each reaches index 2 or inserts a value.</li>
+          <li>Use the stack and queue trace to explain which item each removes first.</li>
+          <li>Recommend a structure for one job and back it up with something you observed.</li>
+        </ol>
+        <label class="field" for="explanation">Your explanation</label>
+        <p id="explanation-prompt" class="small muted">I chose … for … because when I stepped through the model, I saw …</p>
+        <textarea id="explanation" aria-describedby="explanation-prompt" rows="3" maxlength="1500"></textarea>
+        <div class="button-row">
+          <button type="button" class="primary" id="copy-trace">Copy trace</button>
+          <span id="copy-status" role="status"></span>
+        </div>
+        <details id="trace-preview">
+          <summary>View trace text</summary>
+          <label class="visually-hidden" for="trace-text">Trace text</label>
+          <textarea id="trace-text" rows="8" readonly></textarea>
+        </details>
+      </section>
+    </section>
+
+    <noscript><p class="panel">Enable JavaScript in your browser to run the memory models.</p></noscript>
+  </main>
+  <footer class="wrap footer">
+    <p>Simulated byte addresses and links. The diagrams model how the structures can be implemented.</p>
+    <a href="https://opendatastructures.org/newhtml/ods/latex/arrays.html">Open Data Structures reference</a>
+  </footer>
+
+  <dialog id="display-dialog" aria-labelledby="display-title">
+    <form method="dialog">
+      <div class="panel-heading">
+        <h2 id="display-title">Display settings</h2>
+        <button type="submit" autofocus>Done</button>
+      </div>
+      <label class="field">Colour scheme
+        <select id="colour-scheme">
+          <option value="system">Match device</option>
+          <option value="light">Light</option>
+          <option value="dark">Dark</option>
+          <option value="high-contrast">High contrast</option>
+        </select>
+      </label>
+      <label class="field">Text size
+        <select id="text-size">
+          <option value="standard">Standard</option>
+          <option value="large">Large</option>
+          <option value="extra-large">Extra large</option>
+        </select>
+      </label>
+      <button type="button" id="display-reset">Reset display settings</button>
+    </form>
+  </dialog>
+</body>
+</html>
