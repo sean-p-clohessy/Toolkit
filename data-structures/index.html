@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="A 30-minute Level 3 lab for tracing arrays, lists, stacks and queues in memory.">
+  <meta name="description" content="A 90-minute Level 3 lesson on stacks, queues, arrays, lists, linked lists, sets and records.">
   <title>Data Structures Lab | EduTools</title>
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="./styles.css">
-  <script type="module" src="./lab.js"></script>
+  <link rel="stylesheet" href="./styles.css?v=2">
+  <script type="module" src="./lab.js?v=2"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to lab</a>
@@ -20,28 +20,60 @@
   <main id="main" class="wrap" tabindex="-1">
     <div class="intro">
       <div>
-        <p class="eyebrow">Level 3 · 30 minutes</p>
+        <p class="eyebrow">Level 3 · 90 minutes</p>
         <h1>Data Structures Lab</h1>
-        <p>Predict an operation, run it and explain what changed in memory.</p>
+        <p>Learn how seven structures organise data, trace what changes in memory and use your evidence to recommend a structure.</p>
       </div>
-      <fieldset class="representation">
-        <legend>Show stored values in</legend>
-        <div class="segmented">
-          <label><input type="radio" name="format" value="decimal" checked><span>Decimal</span></label>
-          <label><input type="radio" name="format" value="binary"><span>Binary</span></label>
-          <label><input type="radio" name="format" value="hex"><span>Hex</span></label>
-        </div>
-        <p class="small muted">The bits and addresses stay the same.</p>
-      </fieldset>
     </div>
 
     <nav aria-label="Lab activities" class="activities">
-      <a href="#memory" data-stage="memory"><span>01</span> Inspect memory</a>
-      <a href="#flow" data-stage="flow"><span>02</span> Stack vs queue</a>
-      <a href="#choose" data-stage="choose"><span>03</span> Choose and explain</a>
+      <a href="#guide" data-stage="guide" aria-current="page">Learn the structures <span aria-hidden="true">0–35 min</span></a>
+      <a href="#memory" data-stage="memory">Inspect memory <span aria-hidden="true">35–50 min</span></a>
+      <a href="#flow" data-stage="flow">Stack vs queue <span aria-hidden="true">50–65 min</span></a>
+      <a href="#choose" data-stage="choose">Choose and explain <span aria-hidden="true">65–75 min</span></a>
+      <a href="#present" data-stage="present">Build your slides <span aria-hidden="true">75–90 min</span></a>
     </nav>
 
-    <section class="stage" id="stage-memory" aria-labelledby="memory-heading">
+    <fieldset class="representation" id="radix-controls" hidden>
+      <legend>Show stored values in</legend>
+      <div class="segmented">
+        <label><input type="radio" name="format" value="decimal" checked><span>Decimal</span></label>
+        <label><input type="radio" name="format" value="binary"><span>Binary</span></label>
+        <label><input type="radio" name="format" value="hex"><span>Hex</span></label>
+      </div>
+      <p class="small muted">The bits and addresses stay the same.</p>
+    </fieldset>
+
+    <section class="stage" id="stage-guide" aria-labelledby="guide-heading">
+      <div class="stage-heading">
+        <h2 id="guide-heading" tabindex="-1">Learn the structures</h2>
+        <p>Spend five minutes on the starter, 25 minutes exploring the seven entries, and five minutes comparing two structures.</p>
+      </div>
+      <details class="panel lesson-starter">
+        <summary>Starter · Where is the value?</summary>
+        <p>Say what each label tells you. <strong>Index 2</strong>, <strong>address 0x22</strong> and <strong>value 42</strong> describe the same occupied slot.</p>
+        <dl class="starter-terms">
+          <div><dt>Index 2</dt><dd>The third position when counting from zero.</dd></div>
+          <div><dt>Address 0x22</dt><dd>Where the slot sits in this memory model.</dd></div>
+          <div><dt>Value 42</dt><dd>What the slot holds. <code>0010 1010</code> and <code>0x2A</code> show that same value.</dd></div>
+        </dl>
+        <p>Tell a partner which of the three labels would change if the same value moved to the next slot in this array.</p>
+      </details>
+      <div class="guide-layout">
+        <aside class="panel guide-index" aria-labelledby="guide-index-heading">
+          <h3 id="guide-index-heading">Structure guide</h3>
+          <p class="small muted" id="guide-progress"></p>
+          <nav id="structure-links" aria-label="Structures"></nav>
+        </aside>
+        <article class="panel guide-article" id="structure-entry"></article>
+      </div>
+      <div class="takeaway">
+        <p><strong>Compare before the lab.</strong> In your own words, explain how a list can use an array or linked nodes. Then explain how a stack and a queue differ when you remove an item.</p>
+        <a class="button" href="#memory">Next · Inspect memory</a>
+      </div>
+    </section>
+
+    <section class="stage" id="stage-memory" aria-labelledby="memory-heading" hidden>
       <div class="stage-heading">
         <h2 id="memory-heading" tabindex="-1">Inspect memory</h2>
         <p>Predict the address of array index 2, then find the third value in both models. Before inserting 15, predict which values will move.</p>
@@ -81,6 +113,11 @@
             </div>
           </div>
         </article>
+      </div>
+      <div class="panel observation">
+        <label class="field" for="memory-note">Your memory finding</label>
+        <p id="memory-prompt">Record the address read by the array, the addresses visited by the linked list, and what each model had to change when inserting 15. Use the value display switch to check that the addresses stay the same.</p>
+        <textarea id="memory-note" aria-describedby="memory-prompt" rows="3" maxlength="1500"></textarea>
       </div>
       <div class="takeaway">
         <p><strong>Explain the trade-off.</strong> An array can jump straight to a known index. A linked list can insert by changing links once the insertion point is known.</p>
@@ -127,6 +164,11 @@
           <button type="button" id="flow-reset">Reset both</button>
         </div>
       </div>
+      <div class="panel observation">
+        <label class="field" for="flow-note">Your stack and queue finding</label>
+        <p id="flow-prompt">Record the first value removed from each structure and explain the difference. When 7 enters the queue, where is it stored, and when will it leave relative to 20?</p>
+        <textarea id="flow-note" aria-describedby="flow-prompt" rows="3" maxlength="1500"></textarea>
+      </div>
       <div class="takeaway">
         <p><strong>Watch the queue after the removal.</strong> The front moves. Later, a new value uses the freed slot and goes to the back of the queue.</p>
         <a class="button" href="#choose">Next · Choose and explain</a>
@@ -139,33 +181,36 @@
         <p>Match each job to a structure. Use something you observed to explain one of your choices.</p>
       </div>
       <div class="choice-grid" id="choice-grid"></div>
-      <details class="panel extra-structures">
-        <summary>Quick look · Sets and records</summary>
-        <div class="comparison">
-          <div>
-            <h3>Set</h3>
-            <p>A collection of unique values. Adding job 42 again leaves the completed-job set <code>{10, 20, 42}</code> with three entries.</p>
-          </div>
-          <div>
-            <h3>Record</h3>
-            <p>Named fields describe one item. A print job can have <code>ID: 42</code>, <code>pages: 2</code> and <code>status: waiting</code>. A print queue can hold job records.</p>
-          </div>
-        </div>
-      </details>
+      <div class="panel observation">
+        <label class="field" for="explanation">Your recommendation</label>
+        <p id="explanation-prompt">Design a small print system. Choose what holds each job’s details, what controls the waiting order, and what records which IDs have already printed. Justify one choice using something you observed in the lab.</p>
+        <textarea id="explanation" aria-describedby="explanation-prompt" rows="4" maxlength="1500"></textarea>
+      </div>
+      <div class="takeaway">
+        <p><strong>Compare with a partner.</strong> Explain how the structures you chose work together in one system.</p>
+        <a class="button" href="#present">Next · Build your slides</a>
+      </div>
+    </section>
+
+    <section class="stage" id="stage-present" aria-labelledby="present-heading" hidden>
+      <div class="stage-heading">
+        <h2 id="present-heading" tabindex="-1">Build your slides</h2>
+        <p>Use the final 15 minutes to make a short presentation in your own words. Copy your trace to get the addresses, results and notes from your work.</p>
+      </div>
       <section class="panel evidence" aria-labelledby="evidence-heading">
-        <h3 id="evidence-heading">Prepare your three slides</h3>
-        <ol>
-          <li>Compare an array-backed list and a linked list. Show how each reaches index 2 or inserts a value.</li>
-          <li>Use the stack and queue trace to explain which item each removes first.</li>
-          <li>Recommend a structure for one job and back it up with something you observed.</li>
+        <h3 id="evidence-heading">Four slides to hand in</h3>
+        <ol class="slide-plan">
+          <li><strong>Array, list and linked list.</strong> Explain what makes a list a list. Sketch how an array-backed list and a linked list reach index 2 or insert 15.</li>
+          <li><strong>Stack and queue.</strong> Show the same three inputs and the first value removed from each. Explain what the top and front markers tell you.</li>
+          <li><strong>Set and record.</strong> Give one example of each from the print system. Show what happens to a duplicate ID and name two fields in a job record.</li>
+          <li><strong>Your recommendation.</strong> Explain how the print system’s structures work together. Use one lab observation to justify a choice, then say what would change if urgent jobs had to go first.</li>
         </ol>
-        <label class="field" for="explanation">Your explanation</label>
-        <p id="explanation-prompt" class="small muted">I chose … for … because when I stepped through the model, I saw …</p>
-        <textarea id="explanation" aria-describedby="explanation-prompt" rows="3" maxlength="1500"></textarea>
+        <p class="handoff">Check that every slide has a concrete example and that your memory sketch distinguishes an address from its value. Submit one presentation with your name on it.</p>
         <div class="button-row">
           <button type="button" class="primary" id="copy-trace">Copy trace</button>
           <span id="copy-status" role="status"></span>
         </div>
+        <p class="small muted save-note">Your work stays in this tab. Copy the trace before closing it.</p>
         <details id="trace-preview">
           <summary>View trace text</summary>
           <label class="visually-hidden" for="trace-text">Trace text</label>
@@ -174,11 +219,19 @@
       </section>
     </section>
 
-    <noscript><p class="panel">Enable JavaScript in your browser to run the memory models.</p></noscript>
+    <noscript><p class="panel">Enable JavaScript in your browser to use the guide and run the memory models.</p></noscript>
   </main>
   <footer class="wrap footer">
     <p>Simulated byte addresses and links. The diagrams model how the structures can be implemented.</p>
-    <a href="https://opendatastructures.org/newhtml/ods/latex/arrays.html">Open Data Structures reference</a>
+    <details class="references">
+      <summary>References</summary>
+      <ul>
+        <li><a href="https://opendatastructures.org/newhtml/ods/latex/arrays.html">Open Data Structures · Array-based lists, stacks and queues</a></li>
+        <li><a href="https://opendatastructures.org/ods-cpp/3_Linked_Lists.html">Open Data Structures · Linked lists</a></li>
+        <li><a href="https://www.opendatastructures.org/ods-cpp/1_2_Interfaces.html">Open Data Structures · List and set interfaces</a></li>
+        <li><a href="https://docs.oracle.com/en/java/javase/26/language/records.html">Oracle · Record classes</a></li>
+      </ul>
+    </details>
   </footer>
 
   <dialog id="display-dialog" aria-labelledby="display-title">
