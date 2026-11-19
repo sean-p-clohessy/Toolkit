@@ -1,6 +1,15 @@
 {
-  "generatedAt": "2026-11-12T19:53:27.868Z",
+  "generatedAt": "2026-11-19T20:36:52.369Z",
   "updates": [
+    {
+      "tool": "Riverside Service Desk",
+      "repository": "riverside-service-desk",
+      "type": "commit",
+      "summary": "Add Week 9 network lab and individual evidence reports",
+      "url": "https://github.com/sean-p-clohessy/riverside-service-desk/commit/a2e362bdec9e926d80c6f3e6de528feb197d54c4",
+      "timestamp": "2026-11-19T07:43:54Z",
+      "author": "Sean Clohessy"
+    },
     {
       "tool": "Riverside Service Desk",
       "repository": "riverside-service-desk",
@@ -80,15 +89,6 @@
       "summary": "Split English and maths target banks",
       "url": "https://github.com/sean-p-clohessy/SMARTTargetBuilder/commit/2a4d5c8b535be334d40a16b5a12c157c58f78c7b",
       "timestamp": "2026-10-12T09:31:23Z",
-      "author": "Sean Clohessy"
-    },
-    {
-      "tool": "Assessment Record Builder",
-      "repository": "AssessmentRecordBuilder",
-      "type": "commit",
-      "summary": "Restore restrained grade colours and teal accents",
-      "url": "https://github.com/sean-p-clohessy/AssessmentRecordBuilder/commit/1dc5ff39cdd3e90a3f82e4ca9b95fe5ad0140fdd",
-      "timestamp": "2026-10-12T09:21:53Z",
       "author": "Sean Clohessy"
     }
   ]
