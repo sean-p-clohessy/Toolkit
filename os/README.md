@@ -23,7 +23,7 @@ Earlier progress files remain importable. Notes and traces are retained; older c
 
 Static HTML/CSS/JavaScript, no runtime dependencies, analytics or network calls for core activities. Themes (DOS, XP, Windows 7, Linux/Ubuntu) change appearance only. All models are illustrative, deterministic teaching simulations, not an OS emulator or real operating-system commands. Academic references and model limitations are included in the app.
 
-Serve `index.html` with any static server, or deploy main branch / root with GitHub Pages. For direct offline opening use `Riverside_OS_Lab_Offline.html`; it embeds `styles.css`, `models.js`, `learning.js` and `app.js`. Rebuild the offline file whenever those sources change. External reading and lecture downloads still require internet unless separately downloaded. Browser handling of local-file storage varies; JSON export is the portable backup.
+Serve `index.html` with any static server, or deploy main branch / root with GitHub Pages. For direct offline opening use `Riverside_OS_Lab_Offline.html`; it embeds all application CSS and JavaScript, including the installation and command-workshop modules. Rebuild the offline file whenever those sources change. External reading and lecture downloads still require internet unless separately downloaded. Browser handling of local-file storage varies; JSON export is the portable backup.
 
 Keyboard navigation, native form controls, visible focus, responsive layouts and a printable evidence report are provided. Model checks cover interleavings, deadlock, batch arithmetic, access control, buffer conservation and deadline/memory constraints. The complete self-guided route, export/import validation and saved model replay were checked on 12 November 2026.
 
@@ -34,6 +34,14 @@ Open `index.html#week8`. Original XP-style and FreeDOS-style guided setup screen
 Installer decisions and commands share the existing progress backup and evidence report. Week 6–7 scores are separate and unchanged. Each installation can be restarted independently. No credentials, product keys or disk permissions are requested.
 
 New modules: `installer.js` (validated event replay, teaching content, rendering) and `installer.css` (scoped retro computer screens). Regenerate the offline file before publication.
+
+## Week 8 command workshop
+
+Open `index.html#commands`, or continue from installation checks. Nine guided sections cover the prompt, paths, folder/text creation, copying/renaming, moving/deleting, searching, attributes, system inspection and an independent handover. Each provides worked examples, a separate task, hints and practical-result/concept checks. Allow roughly 75–90 minutes depending on experience; this is a planning estimate, not a completion timer. Free practice has a separate disk.
+
+`command-model.js` is a deterministic interpreter for a documented subset of commands; it never executes host commands. `command-lab.js` provides instruction, validation, replay, view and report; `commands.css` styles the workshop. Each environment and section has independent saved command history, from which files are replayed. Undo and per-section reset are available. XP/DOS machine outputs are fixed illustrations, not device measurements. Command help lists all supported commands/switches and model boundaries.
+
+The formatting screen introduces disks, partitions, file systems, FAT and NTFS before the choice. NTFS supports the XP scenario; the DOS teaching route uses FAT16. Existing Weeks 6–8 progress remains compatible. Rebuild the offline file and publish all changed modules together.
 
 ## EduTools publication
 
