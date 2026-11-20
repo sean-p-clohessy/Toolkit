@@ -127,7 +127,7 @@ const Installer = (() => {
     };
     document.querySelectorAll('[data-install-action]').forEach(b=>b.onclick=()=>act(b.dataset.installAction,b.dataset.value));
     const pace=document.getElementById('installPace');if(pace)pace.onchange=()=>{data.pace=pace.value;changed();};
-    document.querySelectorAll('[name="installAnswer"]').forEach(r=>r.onchange=()=>{data.runs[data.active].answer=Number(r.value);data.runs[data.active].checked=false;changed();});
+    document.querySelectorAll('[name="installAnswer"]').forEach(r=>r.onchange=()=>{data.runs[data.active].answer=Number(r.value);data.runs[data.active].checked=false;document.getElementById('installAnswerFeedback').textContent='Answer changed. Select Check my answer when ready.';save();});
     const form=document.getElementById('installCommandForm');if(form)form.onsubmit=ev=>{ev.preventDefault();const input=document.getElementById('installCommand');if(input.value.trim())act('command',input.value.trim());};
     const output=document.getElementById('terminalOutput');if(output)output.scrollTop=output.scrollHeight;
     if(!data.active)return;const s=replay(data.active,data.runs[data.active].events);
