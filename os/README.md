@@ -27,6 +27,14 @@ Serve `index.html` with any static server, or deploy main branch / root with Git
 
 Keyboard navigation, native form controls, visible focus, responsive layouts and a printable evidence report are provided. Model checks cover interleavings, deadlock, batch arithmetic, access control, buffer conservation and deadline/memory constraints. The complete self-guided route, export/import validation and saved model replay were checked on 12 November 2026.
 
+## Week 8 installation simulator
+
+Open `index.html#week8`. Original XP-style and FreeDOS-style guided setup screens rehearse legacy BIOS boot media, partition choice, formatting, copy, restart and first use. No OS software is executed. Copy sequences take about eight seconds, with instant/skip controls and reduced-motion support. VER, DIR, MD LAB, CD LAB, CD \, HELP and CLS run in a limited command model.
+
+Installer decisions and commands share the existing progress backup and evidence report. Week 6–7 scores are separate and unchanged. Each installation can be restarted independently. No credentials, product keys or disk permissions are requested.
+
+New modules: `installer.js` (validated event replay, teaching content, rendering) and `installer.css` (scoped retro computer screens). Regenerate the offline file before publication.
+
 ## EduTools publication
 
 This folder is published as https://edutools.uk/os/ by the Toolkit repository. The source application is maintained in https://github.com/sean-p-clohessy/riverside-os-lab. Refresh the whole os folder together when publishing a new version, including the generated offline HTML and lecture resources. Toolkit deploys its repository root; no domain or workflow change is required.
